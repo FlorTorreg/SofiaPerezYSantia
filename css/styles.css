@@ -40,6 +40,11 @@ li.nav-item{
     padding: 0px 80px;
 }
 
+li.nav-item a:hover{
+    color: white;
+    border-bottom: white 1px solid;
+}
+
 .cita{
     font-size: 30px;
     background: rgb(187, 184, 184);
