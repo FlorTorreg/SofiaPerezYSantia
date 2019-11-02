@@ -27,9 +27,11 @@ p{
     font-family: 'Raleway', sans-serif;
 }
 
+
 #navegador{
     background: black !important;
-   
+    position: sticky;
+    top: 0px;
 }
 
 .no-padding{
@@ -40,10 +42,13 @@ li.nav-item{
     padding: 0px 80px;
 }
 
+
 li.nav-item a:hover{
-    color: white;
+    color: rgb(202, 199, 199);
     border-bottom: white 1px solid;
 }
+
+
 
 .cita{
     font-size: 30px;
