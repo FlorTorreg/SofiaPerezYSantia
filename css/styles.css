@@ -1,46 +1,32 @@
-*{margin:0;padding: 0;}
-
 
 h1{
-    color: #8B0000;
+    color: rgb(165, 98, 98);
     padding-top: 4%;
-    font-size: 70px;
-    font-family: 'Poiret One', cursive;
-    position: absolute;
-   
+    font-size: 110px;
+    font-family: 'Amatic SC', cursive;
 }
 
-h2{
-    color: rgb(155, 155, 155);
-    padding-bottom: 5%;
-    font-size: 30px;
-    font-family: 'Poiret One', cursive;
-}
 header{
     background:white;
     width: 100%;
-    margin-left: 4px; 
-
-}
-
-section{
-    padding-top: 10%;
-}
-
-p{
-    font-family: 'Raleway', sans-serif;
-}
-
-
-li.nav-item{
-    padding: 2px;
-    text-align: right !important;
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 100000000000;
     
 }
 
 
+li.nav-item{    
+    text-align: right !important;
+    font-size: 120%;
+    font-family: 'Poiret One', cursive;
+}
+
+
 li.nav-item a:hover{
-    color: grey;
+    color:black;
+    font-weight: bold;
 }
 
 
@@ -64,7 +50,7 @@ li.nav-item a:hover{
 }
 
 #contacto{
-    background: black;
+    background: grey;
     color: white;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -76,14 +62,23 @@ li.nav-item a:hover{
     border-bottom: grey 1px solid;
     text-align: center;
     padding: 0%;
+    font-family: 'Poiret One', cursive;
 }
 
+
 nav{
-    border-bottom: grey 1px solid;
+    border-bottom: rgb(129, 129, 129) 1px solid;
     position: absolute;
+    margin-top: 8%;
+    padding: 0rem;
+
 }
 
 
 .container{
    margin-top: 40px;
+}
+
+i{
+    color: black;
 }
