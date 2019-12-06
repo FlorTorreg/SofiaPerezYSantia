@@ -2,9 +2,10 @@
 h1{
     color: rgb(165, 98, 98);
     padding-top: 4%;
-    font-size: 110px;
-    font-family: 'Amatic SC', cursive;
+    font-size: 75px;
+    font-family: 'Poiret One', cursive;
 }
+
 
 header{
     background:white;
@@ -21,6 +22,7 @@ li.nav-item{
     text-align: right !important;
     font-size: 120%;
     font-family: 'Poiret One', cursive;
+    padding-bottom: 0%;
 }
 
 
@@ -70,8 +72,7 @@ nav{
     border-bottom: rgb(129, 129, 129) 1px solid;
     position: absolute;
     margin-top: 8%;
-    padding: 0rem;
-
+    margin-left: 10px;
 }
 
 
@@ -81,4 +82,23 @@ nav{
 
 i{
     color: black;
+    padding: 5px;
+    
+}
+
+.redes{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.carrera{
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    z-index: 123009;
+    color: black;
+    font-family: 'Poiret One', cursive;
+    border:  black 1px solid;
+    background: white;
 }
