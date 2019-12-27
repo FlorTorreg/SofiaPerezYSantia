@@ -45,8 +45,7 @@
 						</div>
 				</div>
 			</div>
-		</div>
-			
+		</div>		
 	</header>
 
 	<section id="carrera">
@@ -66,39 +65,46 @@
 	
 	<section id="profileCard">
 		<div class="row no-gutters">
-			<div class="col">
-				<div class="card mb-3" style="max-width: 540px;">
-					<div class="row no-gutters">
-					  <div class="col-md-4">
-						<img src="img/fotoperfil2.jpg" class="card-img" alt="fotoPerfil">
-					  </div>
-					  <div class="col-md-8">
-						<div class="card-body">
-						  <h5 class="card-title">Welcome!</h5>
-						  <p class="card-text">Hi, I'm Sofía and I'm a fashion producer and stylist. In my webpage you can find some of my productions and magazine covers, ENJOY!!!</p>
-						  <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
-						</div>
-					  </div>
-					</div>
-				  </div>
-			</div>
-			<div class="col">
-				<div class="card mb-3" style="max-width: 540px;">
-					<div class="row no-gutters">
-						<div class="col-md-8">
-							<div class="card-body">
-							  <h5 class="card-title">Bienvenido!</h5>
-							  <p class="card-text">Hola, soy Sofía y soy productora y estilista de moda. En mi página web vas a encontrar alguna de mis producciones y tapas de revista, QUÉ DISFRUTES!!!</p>
-							  <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
-							</div>
-						  </div>
-					  <div class="col-md-4">
-						<img src="img/fotoperfil.jpg" class="card-img" alt="fotoPerfil">
-					  </div>
-					  
-					</div>
-				  </div>
-			</div>
+			<?php
+				include('./inc/conexion.php');
+                $conexion=mysqli_connect($server,$userMySQL,$passMySQL,$db) or die("Error de conexion :(");
+                
+                $query1="SELECT * FROM presentaciones";
+                $consulta1= mysqli_query($conexion,$query1);
+                $resultado=mysqli_num_rows($consulta1);
+
+                if($resultado == 0){
+                    echo "Problema en la base de datos >:C";
+                }else{
+                    while ($row = $consulta1 -> fetch_row()) { // Si no hay mas filas, la asignacion falla entonces el login da false
+						
+						echo '<div class="col">
+							<div class="card mb-3" style="max-width: 540px;">
+								<div class="row no-gutters">';
+
+						if($row[0] == 1)
+							echo '<div class="col-md-4">
+								<img src="img/fotoperfil2.jpg" class="card-img" alt="fotoPerfil">
+								</div>';
+
+						echo '<div class="col-md-8">
+									<div class="card-body">
+									<h5 class="card-title">'.$row[1].'</h5>
+									<p class="card-text">'.$row[2].'</p>
+									<p class="card-text"><small class="text-muted">Last updated '.date("d-m-Y", strtotime($row[3])).'</small></p>
+									</div>
+								</div>';
+
+						if($row[0] == 2)
+							echo '<div class="col-md-4">
+								<img src="img/fotoperfil.jpg" class="card-img" alt="fotoPerfil">
+								</div>';
+
+						echo '</div></div></div>';
+                    }
+                    $consulta1 -> free_result();
+                }
+			?>
 		</div>
 		
 	</section>
@@ -170,30 +176,31 @@
 
 
 	
-
 	<footer>
 		<div class="form-style-8">
 		<h2>Contact me!</h2>
-		<form action="mailto:ftorregrossajeff@gmail.com" method="POST" id="formContacto">
-		  <input type="text" name="field1" placeholder="Name" name="nombre" id="nombre" required/>
-		  <input type="email" name="field2" placeholder="Email" maxlength="270" name="email" id="email" required/>
-		  <textarea placeholder="Message" name="mensaje" id="mensaje"></textarea>
+		<div id="formulario">
+		<form id="frm">
+		  <input type="text" placeholder="Name" name="nombre" id="nombre" required/>
+		  <input type="email" placeholder="Email" name="email" id="email" required/>
+		  <textarea placeholder="Message" name="comentario" id="comentario"></textarea>
 		  <input type="submit" value="Send" />
 		</form>
 		<div id="mensaje"></div>
+		</div>
 	  </div>
-	  </footer>
-
+	</footer>
 
 
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/jquery.simpleparallax.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.simpleparallax.js"></script>
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		//$(document).on("ready", function(){
 		$(document).ready(function(){

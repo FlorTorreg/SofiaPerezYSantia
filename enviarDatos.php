@@ -1,14 +1,15 @@
 <?php 
 
+
 //Array POST
 $nombre=$_POST['nombre'];
 $email=$_POST['email'];
-$mensaje=$_POST['mensaje'];
+$comentario=$_POST['comentario'];
 
 //funcion mail()
 $dest="ftorregrossajeff@gmail.com";
 $subject="Probando form con AJAX";
-$mensaje="Mensaje de la web: sofiaperezysantia, Nombre:".$nombre." , Email: ".$email." , Mensaje:".$mensaje;
+$mensaje="Mensaje de la web: sofiaperezysantia, Nombre:".$nombre." , Email: ".$email." , Mensaje:".$comentario;
 $envio=mail($dest,$subject,$mensaje);
 
 

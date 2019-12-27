@@ -13,55 +13,54 @@
 
 </head>
 <body>
-    <header>
+	<header>
 		<div class="container">
 			<div class="row no-gutters">
-				<div class="col-md-8 container-fluid">
+				<div class="col-md-8 container-fluid col-8">
 					<h1>SOFÍA PEREZ Y SANTÍA</h1>
 				</div>
-				<div class="col-md-4">
-					<div class="row-md-4">
-						<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: white">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="col-md-4 col-4">
+					<div class="row">
+						<div class="col-12">
+							<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: white">
+							<a class="navbar-brand" href="#"></a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
-							<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-								<ul class="navbar-nav">
-									<li class="nav-item active">
-										<a class="nav-link" href="index.php">Me<span class="sr-only">(current)</span></a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="work.php">Work</a>
-									</li>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="contacto.php">Contact Me</a>
-									</li>	
-								</ul>
-							</div>
-						</nav>
-					
-					
-					
-					
+								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+									<ul class="navbar-nav">
+										<li class="nav-item active">
+											<a class="nav-link" href="index.php">Me<span class="sr-only">(current)</span></a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="work.php">Work</a>
+										</li>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="contacto.php">Contact Me</a>
+										</li>	
+									</ul>
+								</div>
+							</nav>
+						</div>
 				</div>
-			
+			</div>
+		</div>		
+	</header>
+
+    <section id="contactMe">
+		<div class="form-style-8">
+			<h2>Contact me!</h2>
+			<div id="formulario">
+				<form id="frm">
+					<input type="text" placeholder="Name" name="nombre" id="nombre" required/>
+					<input type="email" placeholder="Email" name="email" id="email" required/>
+					<textarea placeholder="Message" name="comentario" id="comentario"></textarea>
+					<input type="submit" value="Send" />
+				</form>
+			<div id="mensaje"></div>
 			</div>
 		</div>
-			
-    </header>
-    
-    <section id="contactMe">
-        <div class="form-style-8">
-            <h2>Contact me!</h2>
-            <form action="mailto:ftorregrossajeff@gmail.com" method="POST" id="formContacto">
-              <input type="text" name="field1" placeholder="Name" name="nombre" id="nombre" required/>
-              <input type="email" name="field2" placeholder="Email" maxlength="270" name="email" id="email" required/>
-              <textarea placeholder="Message" name="mensaje" id="mensaje"></textarea>
-              <input type="submit" value="Send" />
-            </form>
-            <div id="mensaje"></div>
-		  </div>
 		  <div id="redesContact">
 		  	<a href="https://www.instagram.com/sofiperezysantia/?hl=es-la"><i class="fab fa-instagram" style="color:black"></i></a>
 			<a href="https://twitter.com/sofipys"><i class="fab fa-twitter" style="color:black"></i></a>
