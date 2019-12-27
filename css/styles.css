@@ -49,7 +49,6 @@ li.nav-item a:hover{
     font-weight: bold;
 }
 
-
 input{
     border: none;
     border-bottom: 1px solid grey;
@@ -235,6 +234,3 @@ i:hover{
 	background:linear-gradient(to bottom, grey 5%, rgb(167, 165, 165) 100%);
 	background-color:grey;
 }
-
-
-
